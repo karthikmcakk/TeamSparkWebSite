@@ -1,334 +1,525 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>TeamSparkOfRights</title>
+<html class="no-js" lang="">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>Team spark of Rights</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.svg"/>
+    <!-- Place favicon.ico in the root directory -->
 
-  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <!-- ========================= CSS here ========================= -->
+    <link rel="stylesheet" href="assets/css/bootstrap-5.0.0-beta2.min.css" />
+    <link rel="stylesheet" href="assets/css/LineIcons.2.0.css" />
+    <link rel="stylesheet" href="assets/css/tiny-slider.css" />
+    <link rel="stylesheet" href="assets/css/animate.css" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+  </head>
+  <body>
+   
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: Arial, sans-serif;
-    }
 
-    body {
-      background: #ffffff;
-      color: #111827;
-    }
+		
 
-    header {
-      position: sticky;
-      top: 0;
-      background: rgba(255,255,255,0.9);
-      backdrop-filter: blur(10px);
-      border-bottom: 1px solid #eee;
-      z-index: 1000;
-    }
+    <!-- ========================= header start ========================= -->
+    <header class="header">
+      <div class="navbar-area">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-lg-12">
+              <nav class="navbar navbar-expand-lg">
+                <a class="navbar-brand" href="index.html">
+                  <img src="assets/img/teamspark.jpg" alt="Logo" />
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="toggler-icon"></span>
+                  <span class="toggler-icon"></span>
+                  <span class="toggler-icon"></span>
+                </button>
 
-    .nav-container {
-      max-width: 1100px;
-      margin: auto;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 15px;
-    }
+                <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
+                  <ul id="nav" class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                      <a class="page-scroll active" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="page-scroll" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="page-scroll" href="#service">Services</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="" href="#team">Team</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="" href="#0">Contact</a>
+                    </li>
+                  </ul>
+                </div>
+                <!-- navbar collapse -->
+              </nav>
+              <!-- navbar -->
+            </div>
+          </div>
+          <!-- row -->
+        </div>
+        <!-- container -->
+      </div>
+      <!-- navbar area -->
+    </header>
+    <!-- ========================= header end ========================= -->
 
-    .logo {
-      font-size: 22px;
-      font-weight: bold;
-    }
+    <!-- ========================= hero-section start ========================= -->
+    <section id="home" class="hero-section">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6">
+            <div class="hero-content">
+							
+              <h1 class="wow fadeInUp" data-wow-delay=".4s">
+								Winning Elections Through Strategy, Data and Ground Intelligence
+							</h1>
+              <p class="wow fadeInUp" data-wow-delay=".6s">
+                We help political leaders, candidates, and organizations build influence, mobilize voters, and execute winning campaigns through data-driven political strategy
+              </p>
+							<a href="tel:9786888667" class="main-btn btn-hover wow fadeInUp" data-wow-delay=".6s">Talk to our team</a>
+            </div>
+					</div>
+					<div class="col-lg-6">
+						<div class="hero-img wow fadeInUp" data-wow-delay=".5s">
+							<img src="assets/img/tamilnadu.png" alt="">
+						</div>
+					</div>
+        </div>
+			</div>
+    </section>
+		<!-- ========================= hero-section end ========================= -->
 
-    .logo span {
-      color: #fbbf24;
-    }
+		<!-- ========================= client-logo-section start ========================= -->
+		<section class="client-logo-section pt-150 d-none">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-3 col-sm-6">
+						<div class="single-logo text-center">
+							<img src="assets/img/client-logo/lineicons.svg" alt="">
+						</div>
+					</div>
+					<div class="col-lg-3 col-sm-6">
+						<div class="single-logo text-center">
+							<img src="assets/img/client-logo/uideck.svg" alt="">
+						</div>
+					</div>
+					<div class="col-lg-3 col-sm-6">
+						<div class="single-logo text-center">
+							<img src="assets/img/client-logo/pagebulb.svg" alt="">
+						</div>
+					</div>
+					<div class="col-lg-3 col-sm-6">
+						<div class="single-logo text-center">
+							<img src="assets/img/client-logo/graygrids.svg" alt="">
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- ========================= client-logo-section end ========================= -->
 
-    nav a {
-      margin: 0 10px;
-      text-decoration: none;
-      color: #111827;
-      font-weight: 500;
-    }
+		<!-- ========================= about-section start ========================= -->
+		<section id="about" class="about-section ">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-6">
+						<div class="about-img mb-50">
+							<img src="assets/img/tamilnadu1.png" alt="about">
+						</div>
+					</div>
+					<div class="col-lg-6">
+						<div class="about-content mb-50">
+							<div class="section-title mb-50">
+								<h1 class="mb-25">Who we are</h1>
+								<p>We are a political strategy and campaign consulting firm specializing in modern election management, voter engagement, digital influence, and grassroots execution.</p> <br>
 
-    nav a:hover {
-      color: #fbbf24;
-    }
+<p>Our team brings together expertise in political strategy, digital media, constituency analytics, field coordination, and strategic communication to help leaders connect with people in a meaningful and effective way.</p><br>
 
-    .hero {
-      text-align: center;
-      padding: 90px 20px;
-      background: linear-gradient(to bottom, #fefce8, #ffffff);
-    }
+<p>We collaborate with candidates, political organizations, advocacy groups, and issue-based campaigns across diverse regions and demographics, delivering tailored strategies that strengthen public outreach, engagement, and campaign impact.</p>
+							</div>
+							<div class="accordion pb-15" id="accordionExample">
+								<div class="single-faq">
+									<button class="w-100 text-start" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+										What does Team Spark of Rights do?
+									</button>
+							
+									<div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+										<div class="faq-content">
+											Team Spark of Rights provides political campaign strategy, digital branding, voter outreach, and election management solutions for leaders and political parties.
+										</div>
+									</div>
+								</div>
+								<div class="single-faq">
+									<button class="w-100 text-start collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+										Why choose Team Spark of Rights?
+									</button>
+									<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+										<div class="faq-content">
+											We combine political strategy, grassroots planning, and modern digital campaigning to build strong public connection and campaign impact.
+										</div>
+									</div>
+								</div>
+								<div class="single-faq">
+									<button class="w-100 text-start collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+										What services do you provide during elections?
+									</button>
+									<div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+										<div class="faq-content">
+											We support campaigns with social media management, branding, booth strategy, survey analysis, content creation, and on-ground campaign coordination.
+										</div>
+									</div>
+								</div>
+							</div>
+							
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- ========================= about-section end ========================= -->
 
-    .hero h1 {
-      font-size: 48px;
-      margin-bottom: 10px;
-    }
+		<!-- ========================= service-section start ========================= -->
+		<section id="service" class="service-section img-bg pt-100 pb-100 mt-150">
+			<div class="container">
+				<div class="row justify-content-center">
+					<div class="col-xxl-5 col-xl-6 col-lg-7 col-md-10">
+						<div class="section-title text-center mb-50">
+							<h1>We Specialist at</h1>
+							
+						</div>
+					</div>
+				</div>
 
-    .hero p {
-      color: #6b7280;
-      margin-bottom: 20px;
-    }
+				<div class="row">
+					<div class="col-xl-3 col-md-6">
+						<div class="single-service">
+							<div class="icon color-1">
+								<img src="assets/img/consulting.png" alt="">
+							</div>
+							<div class="content">
+								<h3>Political Consulting</h3>
+								<p>Strategic political guidance for candidates, parties, and organizations including campaign planning, constituency assessment, positioning, and competitive analysis.</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-xl-3 col-md-6">
+						<div class="single-service">
+							<div class="icon color-2">
+							<img src="assets/img/campaign.png" alt="">
+							</div>
+							<div class="content">
+								<h3>Campaign Management</h3>
+								<p>End-to-end campaign execution including booth management, volunteer coordination, voter outreach, war room operations, and campaign monitoring.</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-xl-3 col-md-6">
+						<div class="single-service">
+							<div class="icon color-3">
+								<img src="assets/img/digital.png" alt="">
+							</div>
+							<div class="content">
+								<h3>Digital Campaigns</h3>
+								<p>Social media management, digital narrative building, viral content strategy, online advertising, WhatsApp campaigns, influencer coordination, and digital reputation management.</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-xl-3 col-md-6">
+						<div class="single-service">
+							<div class="icon color-4">
+								<img src="assets/img/consulting.png" alt="">
+							</div>
+							<div class="content">
+								<h3>Data & Voter Analytics</h3>
+								<p>Constituency mapping, voter segmentation, issue analysis, sentiment tracking, survey interpretation, and data-backed decision-making.</p>
+							</div>
+						</div>
+					</div>
+				</div>
 
-    .btn {
-      padding: 12px 25px;
-      background: #fbbf24;
-      border: none;
-      cursor: pointer;
-      font-weight: bold;
-      border-radius: 8px;
-    }
+				<div class="row">
+					<div class="col-xl-3 col-md-6">
+						<div class="single-service">
+							<div class="icon color-1">
+								<img src="assets/img/consulting.png" alt="">
+							</div>
+							<div class="content">
+								<h3>Political Branding</h3>
+								<p>Leader image building, speech positioning, slogan development, manifesto communication, media strategy, and public perception management.</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-xl-3 col-md-6">
+						<div class="single-service">
+							<div class="icon color-2">
+								<img src="assets/img/media.png" alt="">
+							</div>
+							<div class="content">
+								<h3>Media & Communication Strategy</h3>
+								<p>Press communication, crisis response strategy, media coordination, interview preparation, and narrative management.</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-xl-3 col-md-6">
+						<div class="single-service">
+							<div class="icon color-3">
+								<img src="assets/img/consulting.png" alt="">
+							</div>
+							<div class="content">
+								<h3>Ground Operations & Booth Management</h3>
+								<p>Booth-level execution, volunteer coordination, cadre management, and grassroots mobilization.</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-xl-3 col-md-6">
+						<div class="single-service">
+							<div class="icon color-4">
+								<img src="assets/img/consulting.png" alt="">
+							</div>
+							<div class="content">
+								<h3>War Room & Rapid Response Operations</h3>
+								<p>Real-time campaign monitoring, opposition tracking, trend analysis, and strategic rapid-response management.</p>
+							</div>
+						</div>
+					</div>
+				</div>
 
-    .btn:hover {
-      background: #f59e0b;
-    }
+			</div>
+		</section>
+		<!-- ========================= service-section end ========================= -->
 
-    section {
-      max-width: 1100px;
-      margin: auto;
-      padding: 60px 20px;
-    }
+		<!-- ========================= counter-up-section start ========================= -->
+		<section class="counter-up-section pt-150">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-6">
+						<div class="counter-up-content mb-50">
+							<div class="section-title mb-40">
+								<h1 class="mb-20 wow fadeInUp" data-wow-delay=".2s">Why Leaders Choose Us</h1>
+								<p class="wow fadeInUp" data-wow-delay=".4s">We combine political intelligence, digital influence, and ground-level execution to build powerful election campaigns. Our strategies are data-driven, result-focused, and designed to create real public impact.</p>
+							</div>
+							<div class="counter-up-wrapper">
+								<div class="row">
+									<div class="col-lg-3 col-sm-6">
+										<div class="single-counter">
+											<div class="icon color-1">
+												<i class="lni lni-plus"></i>
+											</div>
+											<div class="content">
+												<h1 id="secondo1" class="countup" cup-end="11" cup-append=" ">11</h1>
+												<span>Campaigns Done</span>
+											</div>
+										</div>
+									</div>
+									<div class="col-lg-3 col-sm-6">
+										<div class="single-counter">
+											<div class="icon color-2">
+												<i class="lni lni-checkmark"></i>
+											</div>
+											<div class="content">
+												<h1 id="secondo2" class="countup" cup-end="2" cup-append="M">2</h1>
+												<span>Voters Reached</span>
+											</div>
+										</div>
+									</div>
+									<div class="col-lg-3 col-sm-6">
+										<div class="single-counter">
+											<div class="icon color-3">
+												<i class="lni lni-notepad"></i>
+											</div>
+											<div class="content">
+												<h1 id="secondo3" class="countup" cup-end="15" cup-append="+">15</h1>
+												<span>Political Experience</span>
+											</div>
+										</div>
+									</div>
+									<div class="col-lg-3 col-sm-6">
+										<div class="single-counter">
+											<div class="icon color-4">
+												<i class="lni lni-users"></i>
+											</div>
+											<div class="content">
+												<h1 id="secondo4" class="countup" cup-end="60" cup-append="+">60</h1>
+												<span>Team Members</span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-xl-6 col-lg-6">
+						<div class="counter-up-img mb-50">
+							<img src="assets/img/work.png" alt="">
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- ========================= counter-up-section end ========================= -->
 
-    h2 {
-      font-size: 30px;
-      margin-bottom: 20px;
-    }
 
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-    }
+<section id="team" class="client-logo-section bgsection pb-50 pt-50">
+			<div class="container">
+				<div class="row">
+				<div class="section-title mb-40">
+								<h1 class="mb-20 wow fadeInUp text-center" data-wow-delay=".2s">Our Team</h1>
+								<p class="wow fadeInUp text-center" data-wow-delay=".4s">A skilled team of strategists, analysts, and campaign experts driving modern political campaigns with intelligence and execution.</p>
+							</div>
+					<div class="col-lg-2 col-sm-6">
+						<div class="text-center">
+							<img src="assets/img/dhileeban-pugazh.png" alt="" width="150">
+						</div>
+					</div>
+					<div class="col-lg-2 col-sm-6">
+						<div class="text-left">
+							<div class="content">
+								<h3>Dhileeban Pugazh</h3>
+								<p>CEO & Chief Strategist</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-2 col-sm-6">
+						<div class="text-center">
+							<img src="assets/img/karthik.png" alt="" width="150">
+						</div>
+					</div>
+					<div class="col-lg-2 col-sm-6">
+						<div class="text-left">
+							<div class="content">
+								<h3>Karthik Elayappan</h3>
+								<p>Head of Digital Strategist</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-2 col-sm-6">
+						<div class="text-center">
+							<img src="assets/img/anand.png" alt="" width="150">
+						</div>
+					</div>
+					<div class="col-lg-2 col-sm-6">
+						<div class="text-left">
+							<div class="content">
+								<h3>Anantha Kumar</h3>
+								<p>Media Research Analyst</p>
+							</div>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+		</section>
 
-    .card {
-      background: #fff;
-      border-radius: 12px;
-      padding: 20px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
-      border-left: 4px solid #fbbf24;
-    }
 
-    .service-card {
-      text-align: center;
-      padding: 25px;
-      border-radius: 12px;
-      background: #fff;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-      transition: 0.3s;
-    }
+		<!-- ========================= cta-section start ========================= -->
+		<section class="cta-section img-bg pt-110 pb-60 d-none">
+			<div class="container">
+				<div class="row align-items-center">
+					<div class="col-xl-6 col-lg-7">
+						<div class="section-title mb-50">
+							<h1 class="mb-20 wow fadeInUp" data-wow-delay=".2s">Have any project in you mind? You can hire</h1>
+							<p class="wow fadeInUp" data-wow-delay=".4s">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt.</p>
+						</div>
+					</div>
+					<div class="col-xl-6 col-lg-5">
+						<div class="cta-btn text-lg-end mb-50">
+							<a href="javascript:void(0)" class="main-btn btn-hover text-uppercase">LET'S START YOUR PROJECT</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- ========================= cta-section end ========================= -->
 
-    .service-card:hover {
-      transform: translateY(-5px);
-    }
+    <!-- ========================= footer start ========================= -->
+		<footer class="footer">
+			<div class="container">
+				<div class="widget-wrapper">
+					<div class="row">
+						<div class="col-xl-3 col-md-6">
+							<div class="footer-widget">
+								<div class="logo mb-35">
+									<a href="index.html"> <img src="assets/img/logo/logo.svg" alt=""> </a>
+								</div>
+								<p class="desc mb-35">We are expert designer team, There have a lot of designer and developer If you have any project you can hire Create a website.</p>
+								<ul class="socials">
+									<li>
+										<a href="jvascript:void(0)"> <i class="lni lni-facebook-filled"></i> </a>
+									</li>
+									<li>
+										<a href="jvascript:void(0)"> <i class="lni lni-twitter-filled"></i> </a>
+									</li>
+									<li>
+										<a href="jvascript:void(0)"> <i class="lni lni-instagram-filled"></i> </a>
+									</li>
+									<li>
+										<a href="jvascript:void(0)"> <i class="lni lni-linkedin-original"></i> </a>
+									</li>
+								</ul>
+							</div>
+						</div>
 
-    .icon {
-      width: 70px;
-      height: 70px;
-      margin: 0 auto 10px;
-      border-radius: 50%;
-      overflow: hidden;
-      border: 3px solid #fbbf24;
-    }
+						<div class="col-xl-2 offset-xl-1 col-md-5 offset-md-1 col-sm-6">
+							<div class="footer-widget">
+								<h3>Link</h3>
+								<ul class="links">
+									<li> <a href="javascript:void(0)">Home</a> </li>
+									
+								</ul>
+							</div>
+						</div>
 
-    .icon img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
+						<div class="col-xl-3 col-md-6 col-sm-6">
+							<div class="footer-widget">
+								<h3>Services</h3>
+								<ul class="links">
+									<li> <a href="javascript:void(0)">Graphic design</a> </li>
+									
+								</ul>
+							</div>
+						</div>
 
-    .team-card {
-      text-align: center;
-      padding: 20px;
-      border-top: 4px solid #fbbf24;
-      border-radius: 12px;
-      background: #fff;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-    }
+						<div class="col-xl-3 col-md-6">
+							<div class="footer-widget">
+								<h3>Contact</h3>
+								<ul>
+									<li>+91 97868 88667</li>
+									<li>helldesigner@gmail.ccom</li>
+									<li>United state of America</li>
+								</ul>
+								
+							</div>
+						</div>
 
-    .avatar {
-      width: 130px;
-      height: 130px;
-      border-radius: 50%;
-      margin: 10px auto;
-      overflow: hidden;
-      border: 4px solid #fbbf24;
-    }
+					</div>
+				</div>
 
-    .avatar img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
+				<div class="copy-right">
+					<p>Design and Developed by <a href="https://www.texonsolutions.com" rel="nofollow" target="_blank"> Texon Solutions </a></p>
+				</div>
 
-    .contact-wrapper {
-      max-width: 600px;
-      margin: auto;
-      background: #fff;
-      padding: 25px;
-      border-radius: 12px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-    }
+			</div>
+		</footer>
+    <!-- ========================= footer end ========================= -->
 
-    input, textarea {
-      width: 100%;
-      padding: 10px;
-      margin-bottom: 10px;
-      border: 1px solid #ddd;
-      border-radius: 8px;
-    }
+    <!-- ========================= scroll-top ========================= -->
+    <a href="#" class="scroll-top btn-hover">
+      <i class="lni lni-chevron-up"></i>
+    </a>
 
-    footer {
-      text-align: center;
-      padding: 20px;
-      border-top: 1px solid #eee;
-    }
-  </style>
-</head>
-
-<body>
-
-<header>
-  <div class="nav-container">
-    <div class="logo"><span>Team</span>SparkOfRights</div>
-    <nav>
-      <a href="#strategy">Strategy</a>
-      <a href="#services">Services</a>
-      <a href="#team">Team</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </div>
-</header>
-
-<section class="hero">
-  <h1>Empowering Rights Through Innovation</h1>
-  <p>Research • Governance • Media • Empowerment</p>
-  <button class="btn">Join Our Mission</button>
-</section>
-
-<!-- STRATEGY -->
-<section id="strategy">
-  <h2>Strategy</h2>
-  <div class="grid">
-    <div class="card">Research Driven Policy Building</div>
-    <div class="card">Data Based Governance Systems</div>
-    <div class="card">Transparent Decision Models</div>
-    <div class="card">Digital Empowerment Programs</div>
-  </div>
-</section>
-
-<!-- SERVICES -->
-<section id="services" style="background:#fefce8;">
-  <h2>Services</h2>
-  <div class="grid">
-
-    <div class="service-card">
-      <div class="icon"><img src="https://cdn-icons-png.flaticon.com/512/1995/1995574.png" /></div>
-      Research
-    </div>
-
-    <div class="service-card">
-      <div class="icon"><img src="https://cdn-icons-png.flaticon.com/512/190/190411.png" /></div>
-      Statistics
-    </div>
-
-    <div class="service-card">
-      <div class="icon"><img src="https://cdn-icons-png.flaticon.com/512/2991/2991108.png" /></div>
-      Media Industry
-    </div>
-
-    <div class="service-card">
-      <div class="icon"><img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" /></div>
-      Governance
-    </div>
-
-    <div class="service-card">
-      <div class="icon"><img src="https://cdn-icons-png.flaticon.com/512/3135/3135768.png" /></div>
-      Empowerment
-    </div>
-
-    <div class="service-card">
-      <div class="icon"><img src="https://cdn-icons-png.flaticon.com/512/2885/2885417.png" /></div>
-      Analytics
-    </div>
-
-  </div>
-</section>
-
-<!-- TEAM -->
-<section id="team">
-  <h2>Leadership Team</h2>
-  <div class="grid">
-
-    <div class="team-card">
-      <div class="avatar"><img src="https://cdn-icons-png.flaticon.com/512/4140/4140048.png" /></div>
-      <h3>CEO</h3>
-      <p>Leadership Vision</p>
-    </div>
-
-    <div class="team-card">
-      <div class="avatar"><img src="https://cdn-icons-png.flaticon.com/512/1055/1055687.png" /></div>
-      <h3>CTO</h3>
-      <p>Technology Innovation</p>
-    </div>
-
-  </div>
-</section>
-
-<!-- CONTACT (NO UI LOG) -->
-<section id="contact" style="background:#fefce8;">
-  <h2>Contact Us</h2>
-
-  <div class="contact-wrapper">
-    <input type="text" id="name" placeholder="Name" />
-    <input type="email" id="email" placeholder="Email" />
-    <textarea id="message" rows="4" placeholder="Message"></textarea>
-    <button class="btn" id="sendBtn">Send Message</button>
-  </div>
-
-</section>
-
-<footer>
-  © 2026 TeamSparkOfRights. All Rights Reserved.
-</footer>
-
-<script>
-$(document).ready(function () {
-
-  $("#sendBtn").click(function () {
-
-    let name = $("#name").val();
-    let email = $("#email").val();
-    let message = $("#message").val();
-
-    if (!name || !email || !message) {
-      alert("Please fill all fields");
-      return;
-    }
-
-    let logs = JSON.parse(localStorage.getItem("logs")) || [];
-
-    logs.push({
-      name,
-      email,
-      message,
-      time: new Date().toLocaleString()
-    });
-
-    localStorage.setItem("logs", JSON.stringify(logs));
-
-    $("#name").val("");
-    $("#email").val("");
-    $("#message").val("");
-
-    alert("Message saved successfully!");
-  });
-
-});
-</script>
-
-</body>
+    <!-- ========================= JS here ========================= -->
+    <script src="assets/js/bootstrap-5.0.0-beta2.min.js"></script>
+    <script src="assets/js/count-up.min.js"></script>
+    <script src="assets/js/tiny-slider.js"></script>
+    <script src="assets/js/wow.min.js"></script>
+    <script src="assets/js/polifill.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
 </html>
