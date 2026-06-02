@@ -514,64 +514,118 @@
 <!-- ========================= Full Image Slider Start ========================= -->
 <!-- ========================= Image Carousel Start ========================= -->
 <section class="team-gallery-section">
-  <div class="container">
 
-    <div class="team-gallery-view">
-      <div class="team-gallery-track" id="galleryTrack"></div>
-    </div>
+<div class="container">
 
-    <div class="team-gallery-dots" id="galleryPagination"></div>
+<div class="team-gallery-view">
 
-  </div>
+<div
+class="team-gallery-track"
+id="galleryTrack">
+
+</div>
+
+</div>
+
+<div
+class="team-gallery-dots"
+id="galleryPagination">
+
+</div>
+
+</div>
+
 </section>
 
 <style>
-.team-gallery-section {
-  padding: 60px 0;
-  background: #fff;
+
+.team-gallery-section{
+padding:60px 0;
+background:#fff;
 }
 
-.team-gallery-view {
-  overflow: hidden;
-  width: 100%;
+.team-gallery-view{
+overflow:hidden;
+width:100%;
 }
 
-.team-gallery-track {
-  display: flex;
-  transition: transform 0.5s ease;
+.team-gallery-track{
+display:flex;
+transition:transform .5s ease;
 }
 
-.team-gallery-item {
-  flex: 0 0 25%;
-  padding: 0 18px;
-  box-sizing: border-box;
+.team-gallery-item{
+flex:0 0 25%;
+padding:0 12px;
+box-sizing:border-box;
 }
 
-.team-gallery-item img {
-  width: 100%;
-  height: 230px;
-  object-fit: cover;
-  display: block;
+.team-gallery-item img{
+width:100%;
+height:280px;
+object-fit:cover;
+display:block;
+border-radius:10px;
 }
 
-.team-gallery-dots {
-  text-align: center;
-  margin-top: 45px;
+.team-gallery-dots{
+text-align:center;
+margin-top:40px;
 }
 
-.team-gallery-dots span {
-  width: 13px;
-  height: 13px;
-  background: #ccc;
-  border-radius: 50%;
-  display: inline-block;
-  margin: 0 6px;
-  cursor: pointer;
+.team-gallery-dots span{
+width:12px;
+height:12px;
+background:#d6d6d6;
+border-radius:50%;
+display:inline-block;
+margin:0 6px;
+cursor:pointer;
 }
 
-.team-gallery-dots span.active {
-  background: #111;
+.team-gallery-dots span.active{
+background:#111;
 }
+
+/* Tablet */
+
+@media(max-width:991px){
+
+.team-gallery-item{
+flex:0 0 50%;
+}
+
+.team-gallery-item img{
+height:260px;
+}
+
+}
+
+/* Mobile */
+
+@media(max-width:576px){
+
+.team-gallery-section{
+padding:40px 0;
+}
+
+.team-gallery-item{
+flex:0 0 100%;
+padding:0 18px;
+}
+
+.team-gallery-item img{
+width:100%;
+height:360px;
+object-fit:cover;
+}
+
+.team-gallery-dots{
+margin-top:25px;
+}
+
+}
+
 </style>
 <!-- ========================= Full Image Slider End ========================= -->
 
@@ -672,62 +726,177 @@
 	document.getElementById("year").textContent = new Date().getFullYear();
 </script>
 <script>
-document.addEventListener("DOMContentLoaded", function () {
 
-  const totalImages = 11;
-  const folder = "assets/img/slider/";
-  const prefix = "Teamspark";
-  const ext = ".jpeg";
+document.addEventListener(
+"DOMContentLoaded",
+function(){
 
-  const visibleImages = 4;
-  const imageWidthPercent = 25;
+const totalImages=11;
 
-  const track = document.getElementById("galleryTrack");
-  const dots = document.getElementById("galleryPagination");
+const folder=
+"assets/img/slider/";
 
-  let current = 0;
+const prefix=
+"Teamspark";
 
-  track.innerHTML = "";
-  dots.innerHTML = "";
+const ext=
+".jpeg";
 
-  for (let i = 1; i <= totalImages; i++) {
-    track.innerHTML += `
-      <div class="team-gallery-item">
-        <img src="${folder}${prefix}${i}${ext}" alt="">
-      </div>
-    `;
-  }
+const track=
+document.getElementById(
+"galleryTrack"
+);
 
-  const maxIndex = totalImages - visibleImages;
+const dots=
+document.getElementById(
+"galleryPagination"
+);
 
-  for (let i = 0; i <= maxIndex; i++) {
-    const dot = document.createElement("span");
+let current=0;
 
-    if (i === 0) {
-      dot.classList.add("active");
-    }
+function visible(){
 
-    dot.addEventListener("click", function () {
-      current = i;
-      move();
-    });
+if(window.innerWidth<=576)
+return 1;
 
-    dots.appendChild(dot);
-  }
+if(window.innerWidth<=991)
+return 2;
 
-  function move() {
-    if (current > maxIndex) {
-      current = maxIndex;
-    }
+return 4;
 
-    track.style.transform = "translateX(-" + (current * imageWidthPercent) + "%)";
+}
 
-    document.querySelectorAll("#galleryPagination span").forEach(function (dot, index) {
-      dot.classList.toggle("active", index === current);
-    });
-  }
+function width(){
+
+if(window.innerWidth<=576)
+return 100;
+
+if(window.innerWidth<=991)
+return 50;
+
+return 25;
+
+}
+
+for(
+let i=1;
+i<=totalImages;
+i++
+){
+
+track.innerHTML+=`
+
+<div class="team-gallery-item">
+
+<img
+src="${folder}${prefix}${i}${ext}"
+loading="lazy">
+
+</div>
+
+`;
+
+}
+
+function buildDots(){
+
+dots.innerHTML="";
+
+const max=
+Math.max(
+totalImages-visible(),
+0
+);
+
+for(
+let i=0;
+i<=max;
+i++
+){
+
+const dot=
+document.createElement(
+"span"
+);
+
+if(i===current)
+dot.classList.add(
+"active"
+);
+
+dot.onclick=
+function(){
+
+current=i;
+
+move();
+
+};
+
+dots.appendChild(
+dot
+);
+
+}
+
+}
+
+function move(){
+
+const max=
+Math.max(
+totalImages-visible(),
+0
+);
+
+if(current>max){
+
+current=max;
+
+}
+
+track.style.transform=
+`translateX(-${
+current*width()
+}%)`;
+
+document
+.querySelectorAll(
+"#galleryPagination span"
+)
+.forEach(
+(
+x,
+index
+)=>{
+
+x.classList.toggle(
+"active",
+index===current
+);
 
 });
+
+}
+
+buildDots();
+
+move();
+
+window.addEventListener(
+"resize",
+function(){
+
+current=0;
+
+buildDots();
+
+move();
+
+});
+
+});
+
 </script>
   </body>
 </html>
