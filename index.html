@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="assets/css/tiny-slider.css" />
     <link rel="stylesheet" href="assets/css/animate.css" />
     <link rel="stylesheet" href="assets/css/main.css" />
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
   </head>
   <body>
    
@@ -512,120 +513,70 @@
 		<!-- ========================= cta-section end ========================= -->
 
 <!-- ========================= Full Image Slider Start ========================= -->
-<!-- ========================= Image Carousel Start ========================= -->
 <section class="team-gallery-section">
+  <div class="container">
 
-<div class="container">
+    <div class="swiper teamGallerySwiper">
+      <div class="swiper-wrapper">
 
-<div class="team-gallery-view">
+        <div class="swiper-slide"><img src="assets/img/slider/Teamspark1.jpeg"></div>
+        <div class="swiper-slide"><img src="assets/img/slider/Teamspark2.jpeg"></div>
+        <div class="swiper-slide"><img src="assets/img/slider/Teamspark3.jpeg"></div>
+        <div class="swiper-slide"><img src="assets/img/slider/Teamspark4.jpeg"></div>
+        <div class="swiper-slide"><img src="assets/img/slider/Teamspark5.jpeg"></div>
+        <div class="swiper-slide"><img src="assets/img/slider/Teamspark6.jpeg"></div>
+        <div class="swiper-slide"><img src="assets/img/slider/Teamspark7.jpeg"></div>
+        <div class="swiper-slide"><img src="assets/img/slider/Teamspark8.jpeg"></div>
+        <div class="swiper-slide"><img src="assets/img/slider/Teamspark9.jpeg"></div>
+        <div class="swiper-slide"><img src="assets/img/slider/Teamspark10.jpeg"></div>
+        <div class="swiper-slide"><img src="assets/img/slider/Teamspark11.jpeg"></div>
 
-<div
-class="team-gallery-track"
-id="galleryTrack">
+      </div>
 
-</div>
+      <div class="swiper-pagination swiper-pagination-four-slides"></div>
+    </div>
 
-</div>
-
-<div
-class="team-gallery-dots"
-id="galleryPagination">
-
-</div>
-
-</div>
-
+  </div>
 </section>
 
 <style>
-
-.team-gallery-section{
-padding:60px 0;
-background:#fff;
+.team-gallery-section {
+  padding: 60px 0;
+  background: #fff;
 }
 
-.team-gallery-view{
-overflow:hidden;
-width:100%;
+.teamGallerySwiper {
+  padding-bottom: 55px;
 }
 
-.team-gallery-track{
-display:flex;
-transition:transform .5s ease;
+.teamGallerySwiper .swiper-slide {
+  padding: 0 12px;
 }
 
-.team-gallery-item{
-flex:0 0 25%;
-padding:0 12px;
-box-sizing:border-box;
+.teamGallerySwiper .swiper-slide img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  display: block;
+  border-radius: 10px;
 }
 
-.team-gallery-item img{
-width:100%;
-height:280px;
-object-fit:cover;
-display:block;
-border-radius:10px;
+.teamGallerySwiper .swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  background: #d6d6d6;
+  opacity: 1;
 }
 
-.team-gallery-dots{
-text-align:center;
-margin-top:40px;
+.teamGallerySwiper .swiper-pagination-bullet-active {
+  background: #111;
 }
 
-.team-gallery-dots span{
-width:12px;
-height:12px;
-background:#d6d6d6;
-border-radius:50%;
-display:inline-block;
-margin:0 6px;
-cursor:pointer;
+@media(max-width:576px) {
+  .teamGallerySwiper .swiper-slide img {
+    height: 360px;
+  }
 }
-
-.team-gallery-dots span.active{
-background:#111;
-}
-
-/* Tablet */
-
-@media(max-width:991px){
-
-.team-gallery-item{
-flex:0 0 50%;
-}
-
-.team-gallery-item img{
-height:260px;
-}
-
-}
-
-/* Mobile */
-
-@media(max-width:576px){
-
-.team-gallery-section{
-padding:40px 0;
-}
-
-.team-gallery-item{
-flex:0 0 100%;
-padding:0 18px;
-}
-
-.team-gallery-item img{
-width:100%;
-height:360px;
-object-fit:cover;
-}
-
-.team-gallery-dots{
-margin-top:25px;
-}
-
-}
-
 </style>
 <!-- ========================= Full Image Slider End ========================= -->
 
@@ -725,178 +676,33 @@ margin-top:25px;
 	<script>
 	document.getElementById("year").textContent = new Date().getFullYear();
 </script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<!-- this for sliding image script -->
 <script>
+new Swiper(".teamGallerySwiper", {
+  slidesPerView: 4,
+  spaceBetween: 0,
+  loop: false,
+  grabCursor: true,
 
-document.addEventListener(
-"DOMContentLoaded",
-function(){
+  pagination: {
+    el: ".swiper-pagination-four-slides",
+    clickable: true
+  },
 
-const totalImages=11;
-
-const folder=
-"assets/img/slider/";
-
-const prefix=
-"Teamspark";
-
-const ext=
-".jpeg";
-
-const track=
-document.getElementById(
-"galleryTrack"
-);
-
-const dots=
-document.getElementById(
-"galleryPagination"
-);
-
-let current=0;
-
-function visible(){
-
-if(window.innerWidth<=576)
-return 1;
-
-if(window.innerWidth<=991)
-return 2;
-
-return 4;
-
-}
-
-function width(){
-
-if(window.innerWidth<=576)
-return 100;
-
-if(window.innerWidth<=991)
-return 50;
-
-return 25;
-
-}
-
-for(
-let i=1;
-i<=totalImages;
-i++
-){
-
-track.innerHTML+=`
-
-<div class="team-gallery-item">
-
-<img
-src="${folder}${prefix}${i}${ext}"
-loading="lazy">
-
-</div>
-
-`;
-
-}
-
-function buildDots(){
-
-dots.innerHTML="";
-
-const max=
-Math.max(
-totalImages-visible(),
-0
-);
-
-for(
-let i=0;
-i<=max;
-i++
-){
-
-const dot=
-document.createElement(
-"span"
-);
-
-if(i===current)
-dot.classList.add(
-"active"
-);
-
-dot.onclick=
-function(){
-
-current=i;
-
-move();
-
-};
-
-dots.appendChild(
-dot
-);
-
-}
-
-}
-
-function move(){
-
-const max=
-Math.max(
-totalImages-visible(),
-0
-);
-
-if(current>max){
-
-current=max;
-
-}
-
-track.style.transform=
-`translateX(-${
-current*width()
-}%)`;
-
-document
-.querySelectorAll(
-"#galleryPagination span"
-)
-.forEach(
-(
-x,
-index
-)=>{
-
-x.classList.toggle(
-"active",
-index===current
-);
-
+  breakpoints: {
+    0: {
+      slidesPerView: 1
+    },
+    577: {
+      slidesPerView: 2
+    },
+    992: {
+      slidesPerView: 4
+    }
+  }
 });
-
-}
-
-buildDots();
-
-move();
-
-window.addEventListener(
-"resize",
-function(){
-
-current=0;
-
-buildDots();
-
-move();
-
-});
-
-});
-
 </script>
   </body>
 </html>
