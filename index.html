@@ -19,8 +19,62 @@
   <body>
    
 
+<style>
+.single-service .icon {
+    width: 120px;
+    height: 120px;    
+	 margin: 0 auto 0px;
+    overflow: hidden;
+}
 
+
+.single-service .icon img {
+    width: 180%;
+    height: 180%;
+    object-fit: contain;
+}
+.single-service .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.single-service .icon img {
+    width: 185px;
+    height: 185px;
+    object-fit: contain;
+    transform: translateY(3.4px);
+}
+
+</style>
 		
+<style>
+.image-slider-wrapper {
+  width: 100%;
+  max-width: 900px;
+  height: 420px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.slide-image {
+  display: none;
+  width: 100%;
+  height: 100%;
+}
+
+.slide-image.active {
+  display: block;
+}
+
+.slide-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+</style>
+
 
     <!-- ========================= header start ========================= -->
     <header class="header">
@@ -176,6 +230,25 @@
 										</div>
 									</div>
 								</div>
+								<div class="single-faq">
+  <button class="w-100 text-start collapsed"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#collapseFour"
+          aria-expanded="false"
+          aria-controls="collapseFour">
+    Ground Management?
+  </button>
+
+  <div id="collapseFour"
+       class="collapse"
+       aria-labelledby="headingFour"
+       data-bs-parent="#accordionExample">
+    <div class="faq-content">
+      Build strong grassroots connections with strategic ground operations that bring leaders closer to the people. From voter outreach and community engagement to door-to-door campaigns and rally coordination, we manage every field activity with precision, ensuring your message reaches every corner effectively.
+    </div>
+  </div>
+</div>
 							</div>
 							
 						</div>
@@ -201,7 +274,7 @@
 					<div class="col-xl-3 col-md-6">
 						<div class="single-service">
 							<div class="icon color-1">
-								<img src="assets/img/consulting.png" alt="">
+								<img src="assets/img/service/11.png" alt="">
 							</div>
 							<div class="content">
 								<h3>Political Consulting</h3>
@@ -212,7 +285,7 @@
 					<div class="col-xl-3 col-md-6">
 						<div class="single-service">
 							<div class="icon color-2">
-							<img src="assets/img/campaign.png" alt="">
+							<img src="assets/img/service/2.png" alt="">
 							</div>
 							<div class="content">
 								<h3>Campaign Management</h3>
@@ -223,7 +296,7 @@
 					<div class="col-xl-3 col-md-6">
 						<div class="single-service">
 							<div class="icon color-3">
-								<img src="assets/img/digital.png" alt="">
+								<img src="assets/img/service/3.png" alt="">
 							</div>
 							<div class="content">
 								<h3>Digital Campaigns</h3>
@@ -234,7 +307,7 @@
 					<div class="col-xl-3 col-md-6">
 						<div class="single-service">
 							<div class="icon color-4">
-								<img src="assets/img/consulting.png" alt="">
+								<img src="assets/img/service/4.png" alt="">
 							</div>
 							<div class="content">
 								<h3>Data & Voter Analytics</h3>
@@ -248,7 +321,7 @@
 					<div class="col-xl-3 col-md-6">
 						<div class="single-service">
 							<div class="icon color-1">
-								<img src="assets/img/consulting.png" alt="">
+								<img src="assets/img/service/5.png" alt="">
 							</div>
 							<div class="content">
 								<h3>Political Branding</h3>
@@ -259,7 +332,7 @@
 					<div class="col-xl-3 col-md-6">
 						<div class="single-service">
 							<div class="icon color-2">
-								<img src="assets/img/media.png" alt="">
+								<img src="assets/img/service/6.png" alt="">
 							</div>
 							<div class="content">
 								<h3>Media & Communication Strategy</h3>
@@ -270,7 +343,7 @@
 					<div class="col-xl-3 col-md-6">
 						<div class="single-service">
 							<div class="icon color-3">
-								<img src="assets/img/consulting.png" alt="">
+								<img src="assets/img/service/7.png" alt="">
 							</div>
 							<div class="content">
 								<h3>Ground Operations & Booth Management</h3>
@@ -281,7 +354,7 @@
 					<div class="col-xl-3 col-md-6">
 						<div class="single-service">
 							<div class="icon color-4">
-								<img src="assets/img/consulting.png" alt="">
+								<img src="assets/img/service/8.png" alt="">
 							</div>
 							<div class="content">
 								<h3>War Room & Rapid Response Operations</h3>
@@ -395,7 +468,7 @@
 						<div class="text-left">
 							<div class="content">
 								<h3>Karthik Elayappan</h3>
-								<p>Head of Digital Strategy & Infrastructure</p>
+								<p>Social Media Executive</p>
 							</div>
 						</div>
 					</div>
@@ -437,6 +510,72 @@
 			</div>
 		</section>
 		<!-- ========================= cta-section end ========================= -->
+
+<!-- ========================= Full Image Slider Start ========================= -->
+<!-- ========================= Image Carousel Start ========================= -->
+<section class="team-gallery-section">
+  <div class="container">
+
+    <div class="team-gallery-view">
+      <div class="team-gallery-track" id="galleryTrack"></div>
+    </div>
+
+    <div class="team-gallery-dots" id="galleryPagination"></div>
+
+  </div>
+</section>
+
+<style>
+.team-gallery-section {
+  padding: 60px 0;
+  background: #fff;
+}
+
+.team-gallery-view {
+  overflow: hidden;
+  width: 100%;
+}
+
+.team-gallery-track {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.team-gallery-item {
+  flex: 0 0 25%;
+  padding: 0 18px;
+  box-sizing: border-box;
+}
+
+.team-gallery-item img {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+  display: block;
+}
+
+.team-gallery-dots {
+  text-align: center;
+  margin-top: 45px;
+}
+
+.team-gallery-dots span {
+  width: 13px;
+  height: 13px;
+  background: #ccc;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 0 6px;
+  cursor: pointer;
+}
+
+.team-gallery-dots span.active {
+  background: #111;
+}
+</style>
+<!-- ========================= Full Image Slider End ========================= -->
+
+
 
     <!-- ========================= footer start ========================= -->
 <footer class="footer">
@@ -531,6 +670,64 @@
     <script src="assets/js/main.js"></script>
 	<script>
 	document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  const totalImages = 11;
+  const folder = "assets/img/slider/";
+  const prefix = "Teamspark";
+  const ext = ".jpeg";
+
+  const visibleImages = 4;
+  const imageWidthPercent = 25;
+
+  const track = document.getElementById("galleryTrack");
+  const dots = document.getElementById("galleryPagination");
+
+  let current = 0;
+
+  track.innerHTML = "";
+  dots.innerHTML = "";
+
+  for (let i = 1; i <= totalImages; i++) {
+    track.innerHTML += `
+      <div class="team-gallery-item">
+        <img src="${folder}${prefix}${i}${ext}" alt="">
+      </div>
+    `;
+  }
+
+  const maxIndex = totalImages - visibleImages;
+
+  for (let i = 0; i <= maxIndex; i++) {
+    const dot = document.createElement("span");
+
+    if (i === 0) {
+      dot.classList.add("active");
+    }
+
+    dot.addEventListener("click", function () {
+      current = i;
+      move();
+    });
+
+    dots.appendChild(dot);
+  }
+
+  function move() {
+    if (current > maxIndex) {
+      current = maxIndex;
+    }
+
+    track.style.transform = "translateX(-" + (current * imageWidthPercent) + "%)";
+
+    document.querySelectorAll("#galleryPagination span").forEach(function (dot, index) {
+      dot.classList.toggle("active", index === current);
+    });
+  }
+
+});
 </script>
   </body>
 </html>
