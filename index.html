@@ -518,7 +518,15 @@
 
     <div class="swiper teamGallerySwiper">
       <div class="swiper-wrapper">
+		<!-- Video 1 -->
+        <div class="swiper-slide">
+            <video autoplay muted loop playsinline controls>
+                <source src="assets/video/Teamspark_v_1.mp4" type="video/mp4">
+            </video>
+        </div>
 
+        
+        <!-- Images -->
         <div class="swiper-slide"><img src="assets/img/slider/Teamspark1.jpeg"></div>
         <div class="swiper-slide"><img src="assets/img/slider/Teamspark2.jpeg"></div>
         <div class="swiper-slide"><img src="assets/img/slider/Teamspark3.jpeg"></div>
@@ -529,8 +537,24 @@
         <div class="swiper-slide"><img src="assets/img/slider/Teamspark8.jpeg"></div>
         <div class="swiper-slide"><img src="assets/img/slider/Teamspark9.jpeg"></div>
         <div class="swiper-slide"><img src="assets/img/slider/Teamspark10.jpeg"></div>
+		<!-- Video 2 -->
+        <div class="swiper-slide">
+            <video autoplay muted loop playsinline controls>
+                <source src="assets/video/Teamspark_v_3.mp4" type="video/mp4">
+            </video>
+        </div>
         <div class="swiper-slide"><img src="assets/img/slider/Teamspark11.jpeg"></div>
-
+		<!-- Video 2 -->
+        <div class="swiper-slide">
+            <video autoplay muted loop playsinline controls>
+                <source src="assets/video/Teamspark_v_2.mp4" type="video/mp4">
+            </video>
+        </div>
+		<div class="swiper-slide"><img src="assets/img/slider/Teamspark12.jpeg"></div>
+        <div class="swiper-slide"><img src="assets/img/slider/Teamspark13.jpeg"></div>
+		<div class="swiper-slide"><img src="assets/img/slider/Teamspark14.jpeg"></div>
+        <div class="swiper-slide"><img src="assets/img/slider/Teamspark15.jpeg"></div>
+		<div class="swiper-slide"><img src="assets/img/slider/Teamspark16.jpeg"></div>
       </div>
 
       <div class="swiper-pagination swiper-pagination-four-slides"></div>
@@ -576,6 +600,21 @@
   .teamGallerySwiper .swiper-slide img {
     height: 360px;
   }
+}
+.teamGallerySwiper .swiper-slide img,
+.teamGallerySwiper .swiper-slide video {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    display: block;
+    border-radius: 10px;
+}
+
+@media(max-width:576px){
+   .teamGallerySwiper .swiper-slide img,
+   .teamGallerySwiper .swiper-slide video{
+      height:360px;
+   }
 }
 </style>
 <!-- ========================= Full Image Slider End ========================= -->
@@ -701,6 +740,22 @@ new Swiper(".teamGallerySwiper", {
     992: {
       slidesPerView: 4
     }
+  }
+});
+new Swiper(".teamGallerySwiper", {
+  slidesPerView: 4,
+  spaceBetween: 0,
+  loop: false,
+
+  pagination: {
+    el: ".swiper-pagination-four-slides",
+    clickable: true
+  },
+
+  breakpoints: {
+    0:{ slidesPerView:1 },
+    577:{ slidesPerView:2 },
+    992:{ slidesPerView:4 }
   }
 });
 </script>
